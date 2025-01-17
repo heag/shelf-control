@@ -16,9 +16,7 @@
             "outputPath": "dist/shelf-control",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -26,9 +24,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -73,10 +69,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -84,13 +77,27 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "styles": ["src/styles.scss"],
+            "inlineStyleLanguage": "scss",
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["", "node_modules/"]
+            }
           }
         }
       }
     }
-  }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+       "style": "scss",
+       "changeDetection": "OnPush"
+    },
+    "@angular-eslint/schematics:application": {
+       "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+       "setParserOptionsProject": true
+    }
+ }
 }
