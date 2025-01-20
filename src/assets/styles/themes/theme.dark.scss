@@ -1,0 +1,9 @@
+[data-theme='dark'] {
+    --primary-color: #63bee6;
+    --primary-selected-color: #{reduceColor(#63bee6, 0.08)};
+    --primary-hover-color: #{reduceColor(#63bee6, 0.04)};    
+    --primary-focus-color: #{reduceColor(#63bee6, 0.15)};
+    --primary-border-color: #{reduceColor(#63bee6, 0.6)};
+
+    --main-background-color: #000;
+}

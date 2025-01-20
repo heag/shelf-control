@@ -1,0 +1,19 @@
+<div class="lab">
+    <div class="ca-layout-container">
+       <div class="row">
+          <div class="col-2 nav-bar">
+             <div class="lab__menu">
+                @for (area of areas; track area.title) {
+                   <div [routerLinkActive]="'active'" [routerLink]="[area.path]">{{ area.title }}</div>
+                }
+             </div>
+          </div>
+          <div class="col-10">
+             <div class="lab__outlet">
+                <router-outlet></router-outlet>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ 

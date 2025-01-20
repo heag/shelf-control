@@ -1,0 +1,67 @@
+<h1 class="">Button</h1>
+
+<h4 class="mt-4">Types:</h4>
+<p>
+  Defines the appereance of the button using the <strong>type</strong> input
+  with options: 'primary' | 'secondary' | 'success' | 'error'. Default value:
+  <strong>'primary'.</strong>
+</p>
+
+<div class="example">
+  &lt;hec-button type="secondary"&gt;Click Me!&lt;/hec-button&gt;
+</div>
+
+<section>
+  <div class="variation">
+    <div><hec-button type="primary">Primary</hec-button></div>
+    <div>
+      <hec-button type="secondary" variant="contained">Secondary</hec-button>
+    </div>
+    <div>
+      <hec-button type="success" variant="contained">Success</hec-button>
+    </div>
+    <div><hec-button type="error" variant="contained">Error</hec-button></div>
+    <div><hec-button [disabled]="true">Disabled</hec-button></div>
+  </div>
+</section>
+
+<h4 class="mt-4">Variations:</h4>
+<p>
+  Set up the the <strong>variant</strong> input with options: 'contained' |
+  'outline' | 'text'. Default value: <strong>'contained'.</strong>
+</p>
+
+<div class="example">
+  &lt;hec-button type="primary" variant="outline"&gt;Click
+  Me!&lt;/hec-button&gt;
+</div>
+
+<section>
+  <div class="variation">
+    <div><hec-button variant="contained">Contained</hec-button></div>
+    <div><hec-button variant="outline">Outline</hec-button></div>
+    <div><hec-button variant="text">Text</hec-button></div>
+  </div>
+</section>
+
+<h4 class="mt-4">Size:</h4>
+<p>
+  Set up the the <strong>size</strong> input with options: 'small' | 'medium' |
+  'large'. Default value: <strong>'medium'.</strong>
+</p>
+
+<div class="example">
+  &lt;hec-button size="large"&gt;Click Me!&lt;/hec-button&gt;
+</div>
+
+<section>
+  <div class="variation">
+    <div><hec-button size="small">Small</hec-button></div>
+    <div><hec-button size="medium">Medium</hec-button></div>
+    <div><hec-button size="large">Large</hec-button></div>
+  </div>
+</section>
+
+<p>
+  Events work exactly as Angular Material button.
+</p>
