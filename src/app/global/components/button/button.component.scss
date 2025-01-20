@@ -1,0 +1,194 @@
+.hec-button {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  outline: none;
+  padding: 8px 16px;
+  gap: var(--hec-space-8);
+
+  &--primary {
+    background-color: var(--primary-color);
+
+    &:hover {
+      background-color: var(--primary-dark-color);
+    }
+
+    &.hec-button--tint {
+      background-color: var(--primary-selected-color);
+      color: var(--primary-dark-color);
+
+      &:hover {
+        background-color: var(--primary-focus-color);
+      }
+    }
+
+    &.hec-button--outline {
+      background-color: #fff;
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+
+      &:hover {
+        background-color: var(--primary-hover-color);
+      }
+    }
+
+    &.hec-button--text {
+      background-color: transparent;
+      color: var(--primary-color);
+
+      &:hover {
+        background-color: var(--primary-hover-color);
+      }
+    }
+  }
+
+  // Secondary
+  &--secondary {
+    background-color: var(--secondary-color);
+
+    &:hover {
+      background-color: var(--secondary-dark-color);
+    }
+
+    &.hec-button--tint {
+      background-color: var(--secondary-selected-color);
+      color: var(--secondary-dark-color);
+
+      &:hover {
+        background-color: var(--secondary-focus-color);
+      }
+    }
+
+    &.hec-button--outline {
+      background-color: #fff;
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+
+      &:hover {
+        background-color: var(--secondary-hover-color);
+      }
+    }
+
+    &.hec-button--text {
+      background-color: transparent;
+      color: var(--secondary-color);
+
+      &:hover {
+        background-color: var(--secondary-hover-color);
+      }
+    }
+  }
+
+  // success
+  &--success {
+    background-color: var(--success-color);
+
+    &:hover {
+      background-color: var(--success-dark-color);
+    }
+
+    &.hec-button--tint {
+      background-color: var(--success-selected-color);
+      color: var(--success-dark-color);
+
+      &:hover {
+        background-color: var(--success-focus-color);
+      }
+    }
+
+    &.hec-button--outline {
+      background-color: #fff;
+      color: var(--success-color);
+      border-color: var(--success-color);
+
+      &:hover {
+        background-color: var(--success-hover-color);
+      }
+    }
+
+    &.hec-button--text {
+      background-color: transparent;
+      color: var(--success-color);
+
+      &:hover {
+        background-color: var(--success-hover-color);
+      }
+    }
+  }
+
+  // error
+  &--error {
+    background-color: var(--error-color);
+
+    &:hover {
+      background-color: var(--error-dark-color);
+    }
+
+    &.hec-button--tint {
+      background-color: var(--error-selected-color);
+      color: var(--error-dark-color);
+
+      &:hover {
+        background-color: var(--error-focus-color);
+      }
+    }
+
+    &.hec-button--outline {
+      background-color: #fff;
+      color: var(--error-color);
+      border-color: var(--error-color);
+
+      &:hover {
+        background-color: var(--error-hover-color);
+      }
+    }
+
+    &.hec-button--text {
+      background-color: transparent;
+      color: var(--error-color);
+
+      &:hover {
+        background-color: var(--error-hover-color);
+      }
+    }
+  }
+
+  &--fluid {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: var(--disabled-background-color);
+    color: var(--disabled-text-color);
+    cursor: not-allowed;
+    &:hover {
+      background-color: var(--error-border-color);
+    }
+  }
+
+  &--small {
+    height: var(--size-small);
+    line-height: 15px;
+    font-size: 13px;
+    padding: 4px 12px;
+  }
+
+  &--medium {
+    height: var(--size-medium);
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+  &--large {
+    height: var(--size-large);
+    line-height: 26px;
+    font-size: 16px;
+  }
+}

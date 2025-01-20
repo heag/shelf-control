@@ -1,0 +1,11 @@
+/*
+* Converts a pixel value to REM
+*/
+@function pixelToRem($valInPixels, $base: 10) {
+  $valueInRem: calc($valInPixels / $base) + rem;
+  @return $valueInRem;
+}
+
+@function tint($colour, $opacity) {
+  @return rgba($colour, $opacity);
+}

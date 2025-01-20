@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "hec",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -24,7 +24,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -90,14 +93,14 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-       "style": "scss",
-       "changeDetection": "OnPush"
+      "style": "scss",
+      "changeDetection": "OnPush"
     },
     "@angular-eslint/schematics:application": {
-       "setParserOptionsProject": true
+      "setParserOptionsProject": true
     },
     "@angular-eslint/schematics:library": {
-       "setParserOptionsProject": true
+      "setParserOptionsProject": true
     }
- }
+  }
 }

@@ -1,0 +1,20 @@
+<button   
+   class="hec-button"
+   [disabled]="disabled"
+   [ngClass]="{
+      'hec-button--disabled': disabled,
+      'hec-button--primary': type === 'primary',
+      'hec-button--secondary': type === 'secondary',
+      'hec-button--success': type === 'success',
+      'hec-button--error': type === 'error',
+      'hec-button--small': size === 'small',
+      'hec-button--medium': size === 'medium',
+      'hec-button--large': size === 'large',
+      'hec-button--outline': variant === 'outline',
+      'hec-button--contained': variant === 'contained',
+      'hec-button--text': variant === 'text',
+      'hec-button--fluid': fluid,     
+   }">
+
+   <ng-content></ng-content>
+</button>

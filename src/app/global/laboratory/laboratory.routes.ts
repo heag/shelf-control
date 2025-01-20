@@ -1,0 +1,28 @@
+import { Route } from '@angular/router';
+import { LaboratoryComponent } from './laboratory.component';
+import { ButtonLaboratoryComponent } from './button/button-laboratory.component';
+import { WelcomeLaboratoryComponent } from './welcome/welcome.component';
+
+export const LABORATORY_ROUTES: Route[] = [
+  {
+    path: '',
+    component: LaboratoryComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'welcome',
+        pathMatch: 'full',
+      },
+      {
+        path: 'welcome',
+        title: 'Welcome',
+        component: WelcomeLaboratoryComponent,
+      },
+      {
+        path: 'button',
+        title: 'Button',
+        component: ButtonLaboratoryComponent,
+      },
+    ],
+  },
+];
