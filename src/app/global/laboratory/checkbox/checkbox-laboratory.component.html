@@ -1,0 +1,76 @@
+<h1>Chip</h1>
+
+<section>
+  <h4 class="mt-4">Type:</h4>
+  <p>
+    Defines the color of the chip using the <strong>type</strong> input with
+    options: 'primary' | 'secondary' | 'success' | 'error'. Default value:
+    <strong>'primary'.</strong>
+  </p>
+
+  <div class="example-markdown">
+    &lt;hec-checkbox type="secondary"&gt;Check Me!&lt;/hec-checkbox&gt;
+  </div>
+
+  <form [formGroup]="formGroup">
+    <div>
+      <hec-checkbox
+        type="secondary"
+        [formControl]="formGroup.controls['checkTrueControl']"
+        >{{
+          formGroup.controls["checkTrueControl"].value
+            ? "I am checked !"
+            : "I am not checked !"
+        }}</hec-checkbox
+      >
+    </div>
+  </form>
+
+  <form [formGroup]="formGroup">
+    <div>
+      <hec-checkbox [formControl]="formGroup.controls['checkFalseControl']">{{
+        formGroup.controls["checkFalseControl"].value
+          ? "I am checked !"
+          : "I am not checked !"
+      }}</hec-checkbox>
+    </div>
+  </form>
+</section>
+
+<section>
+  <h4 class="mt-4">Sizes:</h4>
+  <p>
+    Defines the color of the chip using the <strong>type</strong> input with
+    options: 'medium' | 'large' | 'small' | 'xsmall'. Default value:
+    <strong>'medium'.</strong>
+  </p>
+  <div class="laboratory-sample">
+    <form [formGroup]="sizesFormGroup">
+      <div>
+        <hec-checkbox
+          size="small"
+          [formControl]="sizesFormGroup.controls['checkTrueControl']"
+          >Small</hec-checkbox
+        >
+      </div>
+
+      <div>
+        <hec-checkbox
+          size="medium"
+          type="success"
+          [formControl]="sizesFormGroup.controls['checkTrueControl']"
+          >Medium</hec-checkbox
+        >
+      </div>
+
+      <div>
+        <hec-checkbox
+          size="large"
+          type="error"
+          [formControl]="sizesFormGroup.controls['checkTrueControl']"
+          >Large</hec-checkbox
+        >
+      </div>
+    </form>
+  </div>
+</section>

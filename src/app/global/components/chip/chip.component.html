@@ -1,1 +1,16 @@
-<p>chip works!</p>
+<div
+  class="hec-chip"
+  [ngClass]="{
+      'hec-chip--primary': color === 'primary',
+      'hec-chip--secondary': color === 'secondary',
+      'hec-chip--error': color === 'error',
+      'hec-chip--success': color === 'success',
+      'hec-chip--filled': variant === 'filled',
+      'hec-chip--outline': variant === 'outlined',
+      'hec-chip--small': size === 'small',
+   }"
+>
+  <div class="hec-chip__content">
+    <ng-content></ng-content>
+  </div>
+</div>

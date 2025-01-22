@@ -1,0 +1,382 @@
+/*
+* Default Angular Material Theme Generator 
+* Angular Material CSS variable over rides
+* Angular Material class overrides
+*/
+
+@use '@angular/material' as mat;
+@use 'sass:map';
+@include mat.core();
+
+$_palettes: (
+   primary: (
+      0: #000000,
+      10: #022b3b,
+      20: #044059,
+      25: #044b69,
+      30: #065678,
+      35: #07638a,
+      40: #086e99,
+      50: #167da8,
+      60: #2488b3,
+      70: #3794bd,
+      80: #4fa4c9,
+      90: #5eabcc,
+      95: #81bbd4,
+      98: #b5d9e8,
+      99: #f9fdff,
+      100: #ffffff,
+   ),
+   secondary: (
+      0: #000000,
+      10: #2f1500,
+      20: #4d2600,
+      25: #5e2f00,
+      30: #6e3900,
+      35: #7f4300,
+      40: #9c39bd,
+      50: #b16316,
+      60: #d07c2f,
+      70: #f09647,
+      80: #ffb77e,
+      90: #ffdcc3,
+      95: #ffede3,
+      98: #fff8f5,
+      99: #fffbff,
+      100: #ffffff,
+   ),
+   tertiary: (
+      0: #000000,
+      10: #00201d,
+      20: #003732,
+      25: #00433e,
+      30: #005049,
+      35: #005d55,
+      40: #006a62,
+      50: #00867b,
+      60: #00a295,
+      70: #2abfb0,
+      80: #52dbcc,
+      90: #73f8e8,
+      95: #b3fff4,
+      98: #e4fffa,
+      99: #f2fffc,
+      100: #ffffff,
+   ),
+   neutral: (
+      0: #000000,
+      10: #000000,
+      20: #2e3132,
+      25: #393c3d,
+      30: #444749,
+      35: #505354,
+      40: #5c5f60,
+      50: #757779,
+      60: #8f9192,
+      70: #a9abad,
+      80: #c5c7c8,
+      90: #e1e3e4,
+      95: #eff1f2,
+      98: #f8f9fb,
+      99: #fbfcfe,
+      100: #ffffff,
+      4: #0c0f10,
+      6: #111415,
+      12: #1d2021,
+      17: #272a2c,
+      22: #323537,
+      24: #373a3b,
+      87: #d8dadc,
+      92: #e7e8ea,
+      94: #eceeef,
+      96: #f2f4f5,
+   ),
+   neutral-variant: (
+      0: #000000,
+      10: #151d20,
+      20: #293235,
+      25: #343d40,
+      30: #40484c,
+      35: #4b5457,
+      40: #576063,
+      50: #70787c,
+      60: #899296,
+      70: #a4adb0,
+      80: #bfc8cc,
+      90: #dbe4e8,
+      95: #eaf2f6,
+      98: #f2fbff,
+      99: #f9fdff,
+      100: #ffffff,
+   ),
+   error: (
+      0: #000000,
+      10: #4a0206,
+      20: #7a040a,
+      25: #7e0007,
+      30: #93000a,
+      35: #a80710,
+      40: #c62828,
+      50: #de3730,
+      60: #ff5449,
+      70: #bf5c61,
+      80: #ffb4ab,
+      90: #ffdad6,
+      95: #ffedea,
+      98: #fff8f7,
+      99: #fffbff,
+      100: #ffffff,
+   ),
+);
+
+$_rest: (
+   secondary: map.get($_palettes, secondary),
+   neutral: map.get($_palettes, neutral),
+   neutral-variant: map.get($_palettes, neutral-variant),
+   error: map.get($_palettes, error),
+);
+$_primary: map.merge(map.get($_palettes, primary), $_rest);
+$_tertiary: map.merge(map.get($_palettes, tertiary), $_rest);
+
+$base-mat-theme: mat.define-theme(
+   (
+      typography: (
+         plain-family: 'OpenSans',
+         brand-family: 'Amplitude',
+         bold-weight: 700,
+         medium-weight: 600,
+         regular-weight: 400,
+      ),
+      color: (
+         theme-type: light,
+         primary: $_primary,
+         tertiary: $_tertiary,
+      ),
+   )
+);
+
+
+@mixin elevation-4() {
+   --ca-elevation-4: 0 1px 10px 0 rgba(155, 167, 173, 0.2);
+   box-shadow: var(--ca-elevation-4);
+   -webkit-box-shadow: var(--ca-elevation-4);
+   -moz-box-shadow: var(--ca-elevation-4);
+}
+
+@mixin elevation-8() {
+   --ca-elevation-8: 0 3px 14px 2px rgba(155, 167, 173, 0.2);
+   box-shadow: var(--ca-elevation-8);
+   -webkit-box-shadow: var(--ca-elevation-8);
+   -moz-box-shadow: var(--ca-elevation-8);
+}
+
+html {
+   @include mat.all-component-themes($base-mat-theme);
+}
+
+:root {
+   .mat-mdc-form-field {
+      --mat-form-field-error-text-color: var(--error-color);
+      --mat-mdc-form-field-floating-label-scale: 1 !important;
+      --mat-form-field-container-height: #{40px};
+      --mat-form-field-subscript-text-size: #{12px};
+      --mat-form-field-container-text-size: var(--fontsize-body_1);
+   }
+
+   --mdc-outlined-text-field-focus-outline-color: var(--primary-color);
+   --mdc-outlined-text-field-focus-label-text-color: var(--primary-color);
+   --mdc-outlined-text-field-input-text-color: var(--text-color);
+   --mdc-outlined-text-field-label-text-color: var(--text-color);
+   --mdc-outlined-text-field-outline-color: #{rgba(#000, 0.42)};
+   --mdc-outlined-text-field-label-text-color: var(--icon-secondary-color);
+   --mdc-outlined-text-field-hover-outline-color: var(--text-secondary-color);
+   --mdc-outlined-text-field-error-hover-outline-color: var(--error-color);
+   --mdc-outlined-text-field-error-hover-label-text-color: var(--error-color);
+   --mdc-outlined-text-field-hover-label-text-color: var(--text-secondary-color);
+   --mdc-outlined-text-field-caret-color: var(--text-color);
+   --mdc-outlined-text-field-container-shape: var(--radius);
+
+   --mat-form-field-outlined-label-text-populated-size: #[12px];
+   --mdc-outlined-text-field-label-text-size: #[12px];
+
+   --mdc-filled-text-field-container-color: var(--white-colour);
+   --mdc-filled-text-field-container-shape: var(--radius-none);
+   --mdc-filled-text-field-focus-outline-color: var(--primary-color);
+   --mdc-filled-text-field-focus-active-indicator-color: var(--primary-color);
+   --mdc-filled-text-field-focus-label-text-color: var(--primary-color);
+   --mdc-filled-text-field-label-text-color: var(--text-color);
+   --mdc-filled-text-field-input-text-color: var(--text-color);
+   --mdc-filled-text-field-outline-color: var(--icon-secondary-color);
+   --mdc-filled-text-field-label-text-color: var(--icon-secondary-color);
+   --mdc-filled-text-field-label-text-size: #{12px};
+   --mdc-filled-text-field-caret-color: var(--text-color);
+
+   --mat-form-field-container-text-line-height: 24px;
+   --mat-form-field-hover-state-layer-opacity: 0;
+   --mat-form-field-container-vertical-padding: #{12px};
+
+   --mat-select-panel-background-color: var(--background-color);
+   --mat-select-enabled-trigger-text-color: var(--text-color);
+   --mat-select-focused-arrow-color: var(--icon-secondary-color);
+   --mat-select-panel-background-color: var(--white-color);
+   --mat-select-trigger-text-size: var(--fontsize-body_1);
+   --mat-select-trigger-text-line-height: #{24px};
+   --mat-select-trigger-text-tracking: #{0.15px};
+
+   --mat-option-label-text-color: var(--text-color);
+   --mat-option-label-text-size: var(--fontsize-body_1);
+   --mat-option-selected-state-layer-color: var(--primary-focus-color);
+   --mat-option-selected-state-label-text-color: var(--primary-dark-color);
+   --mat-option-selected-state-layer-color: var(--background-color);
+   --mat-option-label-text-line-height: 24px;
+
+   --mat-checkbox-label-text-font: var(--text-color);
+
+   --mdc-circular-progress-active-indicator-color: var(--primary-color);
+   --mat-minimal-pseudo-checkbox-selected-checkmark-color: var(--primary-color);
+   --mat-full-pseudo-checkbox-selected-icon-color: var(--primary-color);
+   --mat-full-pseudo-checkbox-selected-checkmark-color: var(--white-color);
+   --mat-minimal-pseudo-checkbox-selected-checkmark-color: var(--primary-color);
+
+   --mat-stepper-header-selected-state-icon-background-color: var(--primary-color);
+   --mat-stepper-header-selected-state-icon-foreground-color: var(--white-color);
+   --mat-stepper-header-edit-state-icon-background-color: var(--primary-color);
+   --mat-stepper-header-edit-state-icon-foreground-color: var(--white-color);
+
+   --mat-menu-item-label-text-size: var(--fontsize-body_2);
+   --mat-menu-item-label-text-weight: var(--weight-regular);
+   --mat-menu-container-color: var(--white-color);
+   --mat-menu-container-shape: var(--radius);
+   --mat-menu-item-label-text-color: var(--text-color);
+   --mat-menu-item-icon-color: var(--text-color);
+   --mat-menu-item-trailing-spacing: var(--space-16);
+   --mat-menu-item-leading-spacing: var(--space-16);
+   --mat-menu-item-hover-state-layer-color: var(--action-hover-color);
+   --mat-menu-item-focus-state-layer-color: var(--action-focus-color);
+   --mat-menu-container-color: var(--white-color);
+
+   --mdc-plain-tooltip-container-color: var(--primary-dark-color);
+   --mdc-plain-tooltip-supporting-text-color: var(--white-color);
+   --mdc-plain-tooltip-supporting-text-size: 12px;
+   --mdc-plain-tooltip-supporting-text-line-height: 14px;
+   --mdc-plain-tooltip-supporting-text-weight: var(--weight-regular);
+   --mdc-plain-tooltip-container-shape: var(--radius-small);
+
+   --mdc-snackbar-supporting-text-color: var(--text-color);
+   --mdc-snackbar-container-shape: var(--radius-small);
+   --mdc-snackbar-container-color: var(--white-color);
+   --mdc-snackbar-supporting-text-line-height: #{24px};
+   --mdc-snackbar-supporting-text-size: #{16px};
+   --mdc-snackbar-supporting-text-weight: var(--weight-regular);
+
+   .mat-mdc-form-field-infix {
+      align-content: center;
+   }
+
+   .mdc-text-field--filled .mdc-floating-label--float-above {
+      transform: translateY(-106%) scale(1);
+   }
+
+   .mat-accent.mat-mdc-radio-button {
+      --mdc-radio-selected-focus-icon-color: var(--primary-color);
+      --mdc-radio-selected-hover-icon-color: var(--primary-color);
+      --mdc-radio-selected-icon-color: var(--primary-color);
+      --mdc-radio-selected-pressed-icon-color: var(--primary-color);
+      --mat-radio-checked-ripple-color: var(--primary-color);
+      --mat-radio-ripple-color: var(--text-color);
+      --mat-radio-label-text-color: var(--text-color);
+      --mat-radio-label-text-size: var(--fontsize-body_1);
+      --mat-radio-disabled-label-color: var(--action-disabled-color);
+      --mdc-radio-unselected-focus-icon-color: var(--icon-secondary-color);
+   }
+
+   .mat-accent.mat-mdc-checkbox {
+      --mdc-checkbox-selected-checkmark-color: var(--white-color);
+      --mdc-checkbox-selected-focus-icon-color: var(--primary-color);
+      --mdc-checkbox-selected-hover-icon-color: var(--primary-color);
+      --mdc-checkbox-selected-icon-color: var(--primary-color);
+      --mdc-checkbox-selected-focus-state-layer-color: var(--primary-color);
+      --mdc-checkbox-selected-hover-state-layer-color: var(--primary-color);
+      --mdc-checkbox-unselected-pressed-state-layer-color: var(--primary-color);
+      --mat-checkbox-disabled-label-color: var(--action-disabled-color);
+      --mat-checkbox-label-text-color: var(--text-color);
+      --mdc-checkbox-unselected-focus-icon-color: var(--icon-secondary-color);
+      --mat-checkbox-label-text-size: var(--fontsize-body_1);
+   }
+
+   .mdc-text-field--outlined.mdc-notched-outline--upgraded .mdc-floating-label--float-above,
+   .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+      font-size: 12px !important;
+   }
+
+   .mdc-checkbox__background {
+      border-width: 1px !important;
+   }
+
+   .mat-mdc-radio-button .mdc-radio__outer-circle {
+      border-width: 1px !important;
+   }
+
+   .mat-mdc-menu-content {
+      padding: 0;
+   }
+
+   .mat-mdc-menu-panel {
+      padding-top: var(--space-4);
+      padding-bottom: var(--space-4);
+      max-width: unset;
+      @include elevation-4();
+   }
+
+   .mat-mdc-snackbar-surface {
+      padding: 0;
+      @include elevation-8();
+
+      .mdc-snackbar__label {
+         padding: 0;
+      }
+   }
+
+   .mat-mdc-menu-item {
+      min-height: 36px;
+   }
+
+   .mat-mdc-menu-item[disabled] {
+      cursor: default;
+      opacity: 1;
+      color: var(--text-disabled-color);
+   }
+
+   .mat-mdc-autocomplete-panel {
+      max-height: 184px;
+      --mat-autocomplete-container-shape: var(--radius);
+      --mat-autocomplete-background-color: var(--white-color);
+      @include elevation-8();
+
+      &::-webkit-scrollbar {
+         max-width: 9px;
+         &-thumb {
+            border-radius: 4px;
+            height: 46px;
+            background-color: var(--border-divider-color);
+         }
+      }
+
+      .mat-mdc-option {
+         --mat-option-label-text-line-height: var(--space-24);
+         --mat-option-label-text-size: var(--fontsize-body_2);
+         --mat-option-hover-state-layer-color: var(--action-hover-color);
+         padding-top: var(--space-6);
+         padding-bottom: var(--space-6);
+
+         .mat-pseudo-checkbox {
+            display: none;
+         }
+      }
+   }
+}
+
+[data-theme='dark'] {
+   --mdc-plain-tooltip-container-color: var(--black-color);
+   --mdc-plain-tooltip-supporting-text-color: var(--text-inverse-color);
+}

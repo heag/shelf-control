@@ -168,9 +168,6 @@
     background-color: var(--disabled-background-color);
     color: var(--disabled-text-color);
     cursor: not-allowed;
-    &:hover {
-      background-color: var(--error-border-color);
-    }
   }
 
   &--small {

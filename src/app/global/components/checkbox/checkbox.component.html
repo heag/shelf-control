@@ -1,0 +1,16 @@
+<mat-checkbox
+  class="hec-checkbox"
+  [formControl]="formControl"
+  [(indeterminate)]="indeterminate"
+  [ngClass]="{
+      'hec-checkbox--primary': type === 'primary',
+      'hec-checkbox--secondary': type === 'secondary',
+      'hec-checkbox--success': type === 'success',
+      'hec-checkbox--error': type === 'error',
+      'hec-checkbox--small': size === 'small',
+      'hec-checkbox--large': size === 'large',
+      'hec-checkbox--medium': size === 'medium',
+   }"
+>
+   <ng-content></ng-content>
+</mat-checkbox>
