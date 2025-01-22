@@ -1,0 +1,98 @@
+.hec-chip {
+  display: inline-block;
+  border-radius: 100px;
+  line-height: 24px;
+  font-size: 13px;
+  padding: 4px;
+  border: 1px solid transparent;
+  height: 35px;
+  font-weight: 600;
+
+  &--primary {
+    background-color: var(--primary-color);
+    color: #fff;
+
+    &:hover {
+      background-color: var(--primary-dark-color);
+    }
+
+    &.hec-chip--outline {
+      background-color: var(--primary-selected-color);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-border-color);
+
+      &:hover {
+        background-color: var(--primary-hover-color);
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+
+    &:hover {
+      background-color: var(--secondary-dark-color);
+    }
+
+    &.hec-chip--outline {
+      background-color: var(--secondary-selected-color);
+      color: var(--secondary-color);
+      border: 1px solid var(--secondary-border-color);
+
+      &:hover {
+        background-color: var(--secondary-hover-color);
+      }
+    }
+  }
+
+  &--error {
+    background-color: var(--error-color);
+    color: var(--white-color);
+
+    &:hover {
+      background-color: var(--error-dark-color);
+    }
+
+    &.hec-chip--outline {
+      background-color: var(--error-selected-color);
+      color: var(--error-color);
+      border: 1px solid var(--error-border-color);
+
+      &:hover {
+        background-color: var(--error-hover-color);
+      }
+    }
+  }
+
+  &--success {
+    background-color: var(--success-color);
+    color: var(--white-color);
+
+    &:hover {
+      background-color: var(--success-dark-color);
+    }
+
+    &.hec-chip--outline {
+      background-color: var(--success-selected-color);
+      color: var(--success-color);
+      border: 1px solid var(--success-border-color);
+
+      &:hover {
+        background-color: var(--success-hover-color);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin: 0 6px;
+  }
+
+  &--small {
+    height: 24px;
+    line-height: 18px;
+    padding: 2px 4px;
+  }
+}

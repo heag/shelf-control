@@ -1,27 +1,40 @@
 # ShelfControl
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+This is a modern control library developed using **Angular 18** and styled with **Angular Material**. It is designed to provide an intuitive and responsive user interface. Below you'll find the details for setting up and running the application locally, as well as accessing it via the provided URL.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Developed with **Angular 18** framework.
+- Uses **Angular Material** components for a clean, responsive UI.
 
-## Code scaffolding
+## Storybook
+- Access to: https://heag.github.io/shelf-control/welcome
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
 
-## Build
+To run this project locally, ensure you have the following installed:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Node.js](https://nodejs.org/) (version 18.x or above)
+- [npm](https://npmjs.com/) (Node package manager)
+- [Angular CLI](https://angular.io/cli) (version 18.x or above)
 
-## Running unit tests
+## Testing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   Components are testing using the Angular Material Harness
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Follow these steps to set up the application locally:
 
-## Further help
+1. **Clone the repository**:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+   ```bash
+   git clone https://github.com/your-username/your-angular-app.git
+   cd your-angular-app
+   npm i
+   ng serve
+
+
+## Deploy
+
+   ngh --dir=dist/browser

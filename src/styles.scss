@@ -5,5 +5,23 @@
 // Core functions
 // @import './assets/styles/themes/core.functions';
 
-@import './assets/styles/themes/theme.light';
-@import './assets/styles/themes/theme.dark';
+@import "./assets/styles/themes/theme.light";
+@import "./assets/styles/themes/theme.dark";
+@import "./assets/styles/themes/theme.material.scss";
+
+
+.example-markdown {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 8px 12px;
+  color: #fff;
+  margin: 8px 12px 0;
+  margin-bottom: 25px;
+  border-radius: 3px;
+}
+
+.laboratory-sample {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}

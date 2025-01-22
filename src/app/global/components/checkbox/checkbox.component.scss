@@ -1,0 +1,118 @@
+.hec-checkbox {
+  &--primary {
+    --mdc-checkbox-selected-focus-icon-color: var(--primary-color) !important;
+    --mdc-checkbox-selected-hover-icon-color: var(--primary-color) !important;
+    --mdc-checkbox-selected-icon-color: var(--primary-color) !important;
+    --mdc-checkbox-selected-focus-state-layer-color: var(
+      --primary-color
+    ) !important;
+    --mdc-checkbox-selected-hover-state-layer-color: var(
+      --primary-color
+    ) !important;
+    --mdc-checkbox-unselected-pressed-state-layer-color: var(
+      --primary-color
+    ) !important;
+    --mat-checkbox-label-text-color: var(--primary-color) !important;
+  }
+
+  &--secondary {
+    --mdc-checkbox-selected-focus-icon-color: var(--secondary-color) !important;
+    --mdc-checkbox-selected-hover-icon-color: var(--secondary-color) !important;
+    --mdc-checkbox-selected-icon-color: var(--secondary-color) !important;
+    --mdc-checkbox-selected-focus-state-layer-color: var(
+      --secondary-color
+    ) !important;
+    --mdc-checkbox-selected-hover-state-layer-color: var(
+      --secondary-color
+    ) !important;
+    --mdc-checkbox-unselected-pressed-state-layer-color: var(
+      --secondary-color
+    ) !important;
+    --mat-checkbox-label-text-color: var(--secondary-color) !important;
+  }
+
+  &--success {
+    --mdc-checkbox-selected-focus-icon-color: var(
+      --success-color
+    ) !important;
+    --mdc-checkbox-selected-hover-icon-color: var(
+      --success-color
+    ) !important;
+    --mdc-checkbox-selected-icon-color: var(--success-color) !important;
+    --mdc-checkbox-selected-focus-state-layer-color: var(
+      --success-color
+    ) !important;
+    --mdc-checkbox-selected-hover-state-layer-color: var(
+      --success-color
+    ) !important;
+    --mdc-checkbox-unselected-pressed-state-layer-color: var(
+      --success-color
+    ) !important;
+    --mat-checkbox-label-text-color: var(--success-color) !important;
+  }
+
+  &--error {
+    --mdc-checkbox-selected-focus-icon-color: var(--error-color) !important;
+    --mdc-checkbox-selected-hover-icon-color: var(--error-color) !important;
+    --mdc-checkbox-selected-icon-color: var(--error-color) !important;
+    --mdc-checkbox-selected-focus-state-layer-color: var(
+      --error-color
+    ) !important;
+    --mdc-checkbox-selected-hover-state-layer-color: var(
+      --error-color
+    ) !important;
+    --mdc-checkbox-unselected-pressed-state-layer-color: var(
+      --error-color
+    ) !important;
+    --mat-checkbox-label-text-color: var(--error-color) !important;
+  }
+
+  &__label {
+    color: var(--black-color);
+  }
+
+  &--small {
+    ::ng-deep {
+      .mdc-checkbox__ripple {
+        height: 38px;
+        width: 38px;
+        margin: -1px -1px;
+      }
+
+      .mdc-checkbox__background {
+        height: 14px;
+        width: 14px;
+      }
+    }
+  }
+
+  &--medium {
+    ::ng-deep {
+      .mdc-checkbox__ripple {
+        height: 42px;
+        width: 42px;
+        margin: -2px -2px;
+      }
+
+      .mdc-checkbox__background {
+        height: 17px;
+        width: 17px;
+      }
+    }
+  }
+
+  &--large {
+    ::ng-deep {
+      .mdc-checkbox__ripple {
+        height: 46px;
+        width: 46px;
+        margin: -2px -2px;
+      }
+
+      .mdc-checkbox__background {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
