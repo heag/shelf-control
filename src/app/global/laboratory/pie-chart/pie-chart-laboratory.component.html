@@ -1,0 +1,33 @@
+<h1>Pie Chart</h1>
+
+<h4 class="mt-4">Colors:</h4>
+<p>
+  Pie chart component to display data, check code to see the interfaces for
+  data.
+</p>
+
+<div class="example-markdown">
+  &lt;hec-pie-chart [radius]="50" [data]="myData"&gt;Click
+  Me!&lt;/hec-pie-chart&gt;
+</div>
+
+<section>
+  <div class="laboratory-sample">
+    <div>
+      <hec-pie-chart
+        [radius]="50"
+        [strokeWidth]="3"
+        [data]="chartData"
+      ></hec-pie-chart>
+    </div>
+  </div>
+  <div class="laboratory-sample mt-5">
+    <div>
+      <hec-pie-chart
+        [radius]="50"
+        [gapSpace]="0"
+        [data]="chartData"
+      ></hec-pie-chart>
+    </div>
+  </div>
+</section>

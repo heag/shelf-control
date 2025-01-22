@@ -1,0 +1,38 @@
+.pie-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  .chart-data {
+    display: flex;
+    gap: 10px;
+  }
+
+  &-legend {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+
+    .ca-pie-chart-item {
+      display: flex;
+
+      &__text {
+        font-weight: var(--ca-weight-semibold);
+        width: 120px;
+      }
+
+      &__value {
+        padding-left: 30px;
+      }
+
+      &__color {
+        margin-top: 6px;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 1.6rem;
+        border-radius: 2px;
+      }
+    }
+  }
+}

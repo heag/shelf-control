@@ -1,0 +1,30 @@
+<mat-form-field
+  class="hec-input"
+  [appearance]="variant === 'outline' ? 'outline' : 'fill'"
+  [subscriptSizing]="subscriptSizing"
+  [ngClass]="{
+      'hec-input--standard': variant === 'standard',
+      'hec-input--outline': variant === 'outline',
+      'hec-input--small': size === 'small',
+      'hec-input--large': size === 'large',
+      'hec-input--medium': size === 'medium',
+      'hec-input--fluid': fluid,
+   }"
+>
+  @if (label) {
+  <mat-label>{{ label }}</mat-label>
+  }
+
+  <input
+    #input
+    [type]="type"
+    [pattern]="pattern"
+    [placeholder]="placeholder"
+    [formControl]="formControl"
+    matInput
+  />
+
+  @if (formControl.invalid) {
+  <mat-error>Invalid input</mat-error>
+  }
+</mat-form-field>
