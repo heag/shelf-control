@@ -1,0 +1,32 @@
+<h1>Input</h1>
+
+<h4 class="mt-4">Colors:</h4>
+<p>
+  Defines the color of the chip using the <strong>color</strong> input with
+  options: 'primary' | 'secondary' | 'success' | 'error'. Default value:
+  <strong>'primary'.</strong>
+</p>
+
+<div class="example-markdown">
+  &lt;hec-chip color="secondary"&gt;Click Me!&lt;/hec-chip&gt;
+</div>
+
+<section>
+  <div class="laboratory-sample">
+    <form [formGroup]="formGroup">
+      <div>
+        <hec-input
+          [formControl]="formGroup.controls['nameControl']"
+        ></hec-input>
+      </div>
+    </form>
+    <form [formGroup]="formGroup">
+      <div>
+        <hec-input
+          [variant]="'standard'"
+          [formControl]="formGroup.controls['nameControl']"
+        ></hec-input>
+      </div>
+    </form>
+  </div>
+</section>

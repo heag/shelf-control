@@ -2,12 +2,10 @@
 
 @import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-// Core functions
-// @import './assets/styles/themes/core.functions';
-
+// Themes
 @import "./assets/styles/themes/theme.light";
 @import "./assets/styles/themes/theme.dark";
-@import "./assets/styles/themes/theme.material.scss";
+@import "./assets/styles/themes/theme.material";
 
 
 .example-markdown {

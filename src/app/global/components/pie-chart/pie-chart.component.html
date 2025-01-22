@@ -1,0 +1,30 @@
+<div class="pie-chart">
+  <div>
+    @if (circleArcProperties) {
+    <svg [attr.width]="width" [attr.height]="height">
+      @for (circle of circleArcProperties; track circle) {
+      <circle
+        [attr.cx]="circle.cx"
+        [attr.cy]="circle.cy"
+        [attr.r]="circle.radius"
+        [attr.fill]="circle.fill"
+        [attr.stroke]="circle.stroke"
+        [attr.stroke-width]="circle.strokeWidth"
+        [attr.stroke-dasharray]="circle.strokeDashArray"
+        [attr.stroke-dashoffset]="circle.strokeDashoffset"
+        [attr.name]="circle.name"
+      ></circle>
+      }
+    </svg>
+    }
+  </div>
+
+  <div>
+    @for (item of data; track $index) {
+    <div class="chart-data">
+      <div>{{ item.label }} -</div>
+      <div>{{ item.value }}</div>
+    </div>
+    }
+  </div>
+</div>

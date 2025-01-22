@@ -37,5 +37,6 @@ Follow these steps to set up the application locally:
 
 ## Deploy
 
+   WARNING: Use Powershell not GIT
    ng build --output-path=dist --base-href="/shelf-control/"
    ngh --dir=dist/browser

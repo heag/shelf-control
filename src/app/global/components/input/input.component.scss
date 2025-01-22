@@ -1,0 +1,59 @@
+.hec-input {
+  width: 220px;
+
+  &--primary {
+    ::ng-deep .mdc-notched-outline__leading {
+      border-color: var(--primary-color) !important;
+    }
+    ::ng-deep .mdc-notched-outline__notch {
+      border-color: var(--primary-color) !important;
+    }
+    ::ng-deep .mdc-notched-outline__trailing {
+      border-color: var(--primary-color) !important;
+    }
+  }
+
+  &--outline {
+    input {
+      padding-left: 8px;
+    }
+  }
+
+  &--small {
+    --mat-form-field-container-height: 40px;
+    --mat-form-field-container-vertical-padding: 4px;
+    --mat-form-field-filled-with-label-container-padding-top: 0;
+    --mat-form-field-filled-with-label-container-padding-bottom: 0;
+  }
+
+  &--medium {
+    --mat-form-field-container-height: 48px;
+    --mat-form-field-filled-with-label-container-padding-top: 16px;
+    --mat-form-field-filled-with-label-container-padding-bottom: 0;
+  }
+
+  &--large {
+    --mat-form-field-container-height: 56px;
+  }
+
+  &--standard {
+    ::ng-deep {
+      .mat-mdc-floating-label {
+        top: 20px !important;
+      }
+    }
+
+    &.hec-input--small {
+      ::ng-deep {
+        .mat-mdc-floating-label {
+          top: 16px !important;
+          line-height: 22px !important;
+        }
+      }
+    }
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+}

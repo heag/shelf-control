@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ChipComponent } from './chip.component';
 
-fdescribe('ChipComponent', () => {
+describe('ChipComponent', () => {
   let component: ChipComponent;
   let fixture: ComponentFixture<ChipComponent>;
 

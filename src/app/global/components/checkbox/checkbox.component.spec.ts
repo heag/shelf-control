@@ -7,7 +7,7 @@ import { MatCheckboxHarness } from '@angular/material/checkbox/testing';
 import { By } from '@angular/platform-browser';
 import { CheckboxComponent } from './checkbox.component';
 
-fdescribe('CheckboxComponent', () => {
+describe('CheckboxComponent', () => {
   let fixture: ComponentFixture<CheckboxComponent>;
   let component: CheckboxComponent;
   const formControl = new FormControl(false);

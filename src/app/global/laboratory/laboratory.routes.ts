@@ -1,9 +1,11 @@
 import { Route } from '@angular/router';
-import { LaboratoryComponent } from './laboratory.component';
 import { ButtonLaboratoryComponent } from './button/button-laboratory.component';
-import { WelcomeLaboratoryComponent } from './welcome/welcome.component';
-import { ChipLaboratoryComponent } from './chip/chip-laboratory.component';
 import { CheckboxLaboratoryComponent } from './checkbox/checkbox-laboratory.component';
+import { ChipLaboratoryComponent } from './chip/chip-laboratory.component';
+import { InputLaboratoryComponent } from './input/input-laboratory.component';
+import { LaboratoryComponent } from './laboratory.component';
+import { PieChartLaboratoryComponent } from './pie-chart/pie-chart-laboratory.component';
+import { WelcomeLaboratoryComponent } from './welcome/welcome.component';
 
 export const LABORATORY_ROUTES: Route[] = [
   {
@@ -34,6 +36,16 @@ export const LABORATORY_ROUTES: Route[] = [
         path: 'chip',
         title: 'Chip',
         component: ChipLaboratoryComponent,
+      },
+      {
+        path: 'input',
+        title: 'Input',
+        component: InputLaboratoryComponent,
+      },
+      {
+        path: 'pie-chart',
+        title: 'Pie Chart',
+        component: PieChartLaboratoryComponent,
       },
     ],
   },
