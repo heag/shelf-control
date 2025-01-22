@@ -37,4 +37,5 @@ Follow these steps to set up the application locally:
 
 ## Deploy
 
+   ng build --output-path=dist --base-href="/shelf-control/"
    ngh --dir=dist/browser

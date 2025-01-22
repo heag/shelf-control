@@ -25,7 +25,7 @@ import { FormControlBaseComponent } from '../core/form-control.component';
    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CheckboxComponent extends FormControlBaseComponent implements OnInit {   
-   @Input() size: 'success' | 'medium' | 'large' = 'medium';
+   @Input() size: 'small' | 'medium' | 'large' = 'medium';
    @Input() type: 'primary' | 'secondary' | 'success' | 'error' = 'primary';
    @Input() label: string;
    @Input() debounce = 350;
