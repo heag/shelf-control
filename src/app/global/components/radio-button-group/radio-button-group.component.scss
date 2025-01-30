@@ -1,0 +1,57 @@
+.hec-radio-btn-group {
+  &--primary {
+    --mdc-radio-selected-focus-icon-color: var(--primary-color) !important;
+    --mdc-radio-selected-hover-icon-color: var(--primary-color) !important;
+    --mdc-radio-selected-icon-color: var(--primary-color) !important;
+    --mdc-radio-selected-pressed-icon-color: var(--primary-color) !important;
+    --mat-radio-checked-ripple-color: var(--primary-color) !important;
+  }
+
+  &--secondary {
+    --mdc-radio-selected-focus-icon-color: var(--secondary-color) !important;
+    --mdc-radio-selected-hover-icon-color: var(--secondary-color) !important;
+    --mdc-radio-selected-icon-color: var(--secondary-color) !important;
+    --mdc-radio-selected-pressed-icon-color: var(--secondary-color) !important;
+    --mat-radio-checked-ripple-color: var(--secondary-color) !important;
+  }
+
+  &--success {
+    --mdc-radio-selected-focus-icon-color: var(--success-color) !important;
+    --mdc-radio-selected-hover-icon-color: var(--success-color) !important;
+    --mdc-radio-selected-icon-color: var(--success-color) !important;
+    --mdc-radio-selected-pressed-icon-color: var(--success-color) !important;
+    --mat-radio-checked-ripple-color: var(--success-color) !important;
+  }
+
+  &--error {
+    --mdc-radio-selected-focus-icon-color: var(--error-color) !important;
+    --mdc-radio-selected-hover-icon-color: var(--error-color) !important;
+    --mdc-radio-selected-icon-color: var(--error-color) !important;
+    --mdc-radio-selected-pressed-icon-color: var(--error-color) !important;
+    --mat-radio-checked-ripple-color: var(--error-color) !important;
+  }
+
+  &--label-top {
+    ::ng-deep {
+      .mat-internal-form-field {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &--label-bottom {
+    ::ng-deep {
+      .mat-internal-form-field {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &--label-before {
+    ::ng-deep {
+      .mat-internal-form-field {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

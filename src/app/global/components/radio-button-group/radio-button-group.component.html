@@ -1,0 +1,20 @@
+<mat-radio-group class="hec-radio-btn-group" [formControl]="formControl">
+  @for (option of options; track option) {
+  <mat-radio-button
+    [value]="option"
+    hearthTestId="hec-radio-btn-test"
+    [ngClass]="{
+            'hec-radio-btn-group--primary': type === 'primary',
+            'hec-radio-btn-group--secondary': type === 'secondary',
+            'hec-radio-btn-group--success': type === 'success',
+            'hec-radio-btn-group--error': type === 'error',            
+            'hec-radio-btn-group--label-top': labelPosition === 'top',
+            'hec-radio-btn-group--label-before': labelPosition === 'before',
+         }"
+  >
+    {{ option }}
+  </mat-radio-button>
+  } @if (formControl.invalid) {
+  <mat-error>{{ formControl.errors }}</mat-error>
+  }
+</mat-radio-group>
