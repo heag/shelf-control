@@ -1,0 +1,90 @@
+<h1>Radio Button Group</h1>
+
+<p>Includes Form Control Validations</p>
+
+<h4 class="mt-4">Sample:</h4>
+<p>
+  Send an array of options using the <strong>options</strong> input, specify
+  form control and type: 'primary' | 'secondary' | 'success' | 'error'. Default
+  value:
+  <strong>'primary'.</strong>
+</p>
+
+<div class="example-markdown">
+  &lt;radio-button-group type="primary"
+  [formControl]="formGroupSimple.controls['simpleControl']"
+  [options]="seasons"&gt;&lt;/hec-button&gt;
+</div>
+
+<section>
+  <div class="laboratory-sample mb-2">
+    <form [formGroup]="formGroup">
+      <radio-button-group
+        [formControl]="formGroup.controls['seasonControl']"
+        [options]="seasons"
+        type="primary"
+      ></radio-button-group>
+    </form>
+  </div>
+  Selected: <strong>{{ formGroup.controls["seasonControl"].value }}</strong>
+</section>
+
+<h4 class="mt-4">Variations:</h4>
+
+<section>
+  <div class="laboratory-sample">
+    <form [formGroup]="formGroupSimple">
+      <radio-button-group
+        [formControl]="formGroupSimple.controls['simpleControl']"
+        [options]="['Primary']"
+        type="primary"
+      ></radio-button-group>
+
+      <radio-button-group
+        [formControl]="formGroupSimple.controls['simpleControl']"
+        [options]="['Secondary']"
+        type="secondary"
+      ></radio-button-group>
+
+      <radio-button-group
+        [formControl]="formGroupSimple.controls['simpleControl']"
+        [options]="['Error']"
+        type="error"
+      ></radio-button-group>
+
+      <radio-button-group
+        [formControl]="formGroupSimple.controls['simpleControl']"
+        [options]="['Sucess']"
+        type="success"
+      ></radio-button-group>
+    </form>
+  </div>
+</section>
+
+<h4 class="mt-4">Label Position:</h4>
+
+<section>
+  <div class="laboratory-sample label-position">
+    <form [formGroup]="formGroupSimple">
+      <radio-button-group
+        [formControl]="formGroupSimple.controls['simpleControl']"
+        [options]="['After']"
+        type="primary"
+      ></radio-button-group>
+
+      <radio-button-group
+        [formControl]="formGroupSimple.controls['simpleControl']"
+        [options]="['Before']"
+        [labelPosition]="'before'"
+        type="primary"
+      ></radio-button-group>
+
+      <radio-button-group
+        [formControl]="formGroupSimple.controls['simpleControl']"
+        [options]="['Top']"
+        labelPosition="top"
+        type="primary"
+      ></radio-button-group>
+    </form>
+  </div>
+</section>
