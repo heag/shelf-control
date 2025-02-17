@@ -55,9 +55,9 @@ export class InputComponent extends FormControlBaseComponent implements OnInit {
   @Input() size: 'medium' | 'large' | 'small' = 'medium';
   @Input() subscriptSizing: 'dynamic' | 'fixed' = 'dynamic';
   @Input() fluid: boolean;
-  @Input() label: string = 'label';
+  @Input() label: string;
   @Input() debounce = 350;
-  @Input() placeholder: string = 'test';
+  @Input() placeholder: string;
   @Input() pattern: string | RegExp;
   valueChange = output<string>();
 

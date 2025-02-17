@@ -12,6 +12,6 @@ import { InputComponent } from '../../components/input/input.component';
 })
 export class InputLaboratoryComponent {
   formGroup = new FormGroup({
-    nameControl: new FormControl('Name'),
+    nameControl: new FormControl(''),
   });
 }
