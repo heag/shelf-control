@@ -1,0 +1,27 @@
+.hec-card {
+  border-radius: 8px;
+  max-width: 100%;
+  padding: 24px;
+  background: var(--white-color);
+
+  &__parent {
+    border: 0.5px solid var(--black-color-10);
+    box-shadow: 1px 8px 0 rgba(155, 167, 173, 0.2);
+    -webkit-box-shadow: 1px 4px 0 rgba(155, 167, 173, 0.2);
+    -moz-box-shadow: 1px 8px 0 rgba(155, 167, 173, 0.2);
+  }
+
+  &__child {
+    border: 1px solid var(--black-color-10);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__top + &__content {
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,25 @@
+<h1>Card</h1>
+
+<div class="example-markdown">
+  &lt;hec-card [title]="'Parent card'" type="parent"&gt;&lt;/hec-card&gt;
+</div>
+
+<h4 class="mt-4">Sample:</h4>
+
+<section>
+  <div class="laboratory-sample cards">
+    <div>
+        <hec-card [title]="'Parent card'" type="parent">
+            <div card-content class="content-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </hec-card>
+    </div>
+    <div>
+      <hec-card [title]="'Child card'" type="child">
+        <div card-content class="content-text">Without Drop-shadow</div>
+      </hec-card>
+    </div>
+  </div>
+</section>

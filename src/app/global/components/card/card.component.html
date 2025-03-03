@@ -1,0 +1,13 @@
+<div class="hec-card" [ngClass]="['hec-card__' + type]">
+    @if (title) {
+       <div class="hec-card__top">
+          <h6 role="heading" [attr.aria-level]="headingAriaLevel" class="hec-heading title">{{ title }}</h6>
+ 
+          <ng-content select="[card-action]"></ng-content>
+       </div>
+    }
+ 
+    <div class="hec-card__content">
+       <ng-content select="[card-content]"></ng-content>
+    </div>
+ </div>

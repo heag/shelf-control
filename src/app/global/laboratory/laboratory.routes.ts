@@ -7,6 +7,7 @@ import { LaboratoryComponent } from './laboratory.component';
 import { PieChartLaboratoryComponent } from './pie-chart/pie-chart-laboratory.component';
 import { RadioButtonGroupLaboratoryComponent } from './radio-button-group/radio-button-group-laboratory.component';
 import { WelcomeLaboratoryComponent } from './welcome/welcome.component';
+import { CardLaboratoryComponent } from './card/card-laboratory.component';
 
 export const LABORATORY_ROUTES: Route[] = [
   {
@@ -27,6 +28,11 @@ export const LABORATORY_ROUTES: Route[] = [
         path: 'button',
         title: 'Button',
         component: ButtonLaboratoryComponent,
+      },
+      {
+        path: 'card',
+        title: 'Card',
+        component: CardLaboratoryComponent,
       },
       {
         path: 'checkbox',
