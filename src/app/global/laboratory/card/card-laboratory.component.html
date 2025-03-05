@@ -4,21 +4,32 @@
   &lt;hec-card [title]="'Parent card'" type="parent"&gt;&lt;/hec-card&gt;
 </div>
 
-<h4 class="mt-4">Sample:</h4>
+<h4 class="mt-4 mb-4">Samples:</h4>
 
 <section>
   <div class="laboratory-sample cards">
     <div>
-        <hec-card [title]="'Parent card'" type="parent">
-            <div card-content class="content-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-          </hec-card>
+      <hec-card [title]="'Parent card'" type="parent">
+        <div card-content class="content-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </hec-card>
     </div>
-    <div>
+
+    <div class="mt-2">
       <hec-card [title]="'Child card'" type="child">
         <div card-content class="content-text">Without Drop-shadow</div>
+      </hec-card>
+    </div>
+
+    <div class="card-pie mt-2">
+      <hec-card [title]="'Team skillset'">
+        <hec-pie-chart
+          card-content
+          [radius]="48"
+          [data]="chartData"
+        ></hec-pie-chart>
       </hec-card>
     </div>
   </div>
